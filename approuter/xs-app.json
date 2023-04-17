@@ -1,7 +1,7 @@
 {
 	"welcomeFile": "index.html",
 	"authenticationMethod": "route",
-	"routes": [
+	"routes": [ 
 		{
 			"source": "^/user-api(.*)",
 			"target": "$1",
