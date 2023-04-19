@@ -29,7 +29,7 @@
     const responseUser = await fetch(
       "/github-api/users/agraeber/repos?sort=updated&per_page=100"
     );
-    const resultUser = await response.json();
+    const resultUser = await responseUser.json();
     const myListUser = document.getElementById("myListAgraeber");
     for (let i = 0; i < resultUser.length; i++) {
       const newListItem = document.createElement("li");
@@ -37,7 +37,7 @@
       newLink.textContent = resultUser[i].html_url;
       newLink.href = resultUser[i].html_url;
       newListItem.appendChild(newLink);
-      myList.appendChild(newListItem);
+      myListUser.appendChild(newListItem);
     }
   };
   main();
